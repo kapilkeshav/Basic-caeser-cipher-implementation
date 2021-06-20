@@ -27,6 +27,7 @@ def encrypt(text,shift):
     check = alphabet_creator()
     fin = output_table()
     encrypt=''
+    text = text.replace(" ","")
     for i in text:
         val = check[i]
         key = hash_func_encr(val,shift)
@@ -37,6 +38,7 @@ def decrypt(text,shift):
     check = alphabet_creator()
     fin = output_table()
     decrypt = ''
+    text = text.replace(" ","")
     for i in text:
         val = check[i]
         key = hash_func_decr(val,shift)
